@@ -4,12 +4,12 @@ export default function Footer() {
   return (
     <footer className="border-t border-border2/60 py-14">
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 px-5 text-center">
-        <h2 className="font-serif text-2xl text-ink sm:text-3xl">Let's build something efficient together.</h2>
+        <h2 className="text-2xl font-semibold text-ink sm:text-3xl">Let's build something efficient together.</h2>
         <a
           href={SOCIAL.calendly}
           target="_blank"
           rel="noreferrer"
-          className="rounded-full bg-accent px-7 py-3 text-sm font-medium text-bg transition hover:opacity-90"
+          className="rounded-full bg-black px-7 py-3 text-sm text-ink transition hover:bg-white/10"
         >
           Get in Touch
         </a>

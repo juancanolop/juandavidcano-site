@@ -1,7 +1,6 @@
 // Content mirrored from the live juandavidcano.com (Framer) site.
 
 export const NAV_LINKS = [
-  { label: "Home", href: "/" },
   { label: "Projects", href: "/#case-study" },
   { label: "About Me", href: "/about-me" },
   { label: "Blog", href: "https://news.kronosgmt.com/", external: true },
@@ -15,6 +14,7 @@ export const SOCIAL = {
 };
 
 export const HERO = {
+  photo: "https://framerusercontent.com/images/LgTN8Ajc2Wcp7HS3fovE9kFM0Y.png?scale-down-to=1024&width=2048&height=2048",
   name: "JUAN DAVID CANO",
   tagline:
     "Civil engineer obsessed with saving time in design and planning. If you've ever thought, 'There has to be a better way,' let's talk.",

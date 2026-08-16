@@ -6,13 +6,13 @@ export default function ProjectsTeaser() {
     <section id="case-study" className="mx-auto max-w-5xl scroll-mt-24 px-5 py-16">
       <div className="grid items-center gap-8 rounded-2xl border border-border2/60 bg-bg2 p-6 sm:p-10 md:grid-cols-2">
         <div>
-          <h2 className="font-serif text-2xl text-ink sm:text-3xl">{PROJECTS_TEASER.heading}</h2>
+          <h2 className="text-2xl font-semibold text-ink sm:text-3xl">{PROJECTS_TEASER.heading}</h2>
           <p className="mt-4 text-ink/80">{PROJECTS_TEASER.body}</p>
           <a
             href={SOCIAL.dashboard}
             target="_blank"
             rel="noreferrer"
-            className="mt-6 inline-block rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition hover:opacity-90"
+            className="mt-6 inline-block rounded-full bg-black px-6 py-3 text-sm text-ink transition hover:bg-white/10"
           >
             {PROJECTS_TEASER.cta}
           </a>

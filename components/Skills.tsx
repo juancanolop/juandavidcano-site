@@ -3,7 +3,7 @@ import { SKILLS } from "@/lib/content";
 export default function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-5xl scroll-mt-24 px-5 py-16">
-      <h2 className="mb-8 text-center font-serif text-2xl text-ink sm:text-3xl">Skills</h2>
+      <h2 className="mb-8 text-center text-2xl font-semibold text-ink sm:text-3xl">Skills</h2>
       <div className="flex flex-wrap justify-center gap-2.5">
         {SKILLS.map((skill) => (
           <span

@@ -8,12 +8,8 @@ export default function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border2/60 bg-bg/80 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
-        <Link href="/" className="font-serif text-lg tracking-wide text-ink">
-          JDC
-        </Link>
-
+    <header className="sticky top-0 z-50">
+      <div className="mx-auto flex max-w-5xl items-center justify-end gap-8 px-5 py-5">
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) =>
@@ -23,23 +19,23 @@ export default function NavBar() {
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sm text-ink/80 transition hover:text-accent"
+                className="text-sm text-ink/80 transition hover:text-ink"
               >
                 {link.label}
               </a>
             ) : (
-              <Link key={link.label} href={link.href} className="text-sm text-ink/80 transition hover:text-accent">
+              <Link key={link.label} href={link.href} className="text-sm text-ink/80 transition hover:text-ink">
                 {link.label}
               </Link>
             )
           )}
           <a
-            href={SOCIAL.linkedin}
+            href={SOCIAL.calendly}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-border2 px-4 py-1.5 text-sm text-ink transition hover:border-accent hover:text-accent"
+            className="rounded-full bg-black px-5 py-2 text-sm text-ink transition hover:bg-white/10"
           >
-            LinkedIn
+            Get in Touch
           </a>
         </nav>
 
@@ -61,10 +57,7 @@ export default function NavBar() {
       {/* Mobile overlay menu */}
       {open && (
         <div className="fixed inset-0 z-50 flex flex-col bg-bg md:hidden">
-          <div className="flex items-center justify-between px-5 py-4">
-            <Link href="/" onClick={() => setOpen(false)} className="font-serif text-lg tracking-wide text-ink">
-              JDC
-            </Link>
+          <div className="flex items-center justify-end px-5 py-5">
             <button
               onClick={() => setOpen(false)}
               aria-label="Close menu"
@@ -74,7 +67,7 @@ export default function NavBar() {
             </button>
           </div>
 
-          <nav className="flex flex-1 flex-col items-start justify-center gap-6 px-8">
+          <nav className="flex flex-1 flex-col items-center justify-center gap-8">
             {NAV_LINKS.map((link) =>
               link.external ? (
                 <a
@@ -83,7 +76,7 @@ export default function NavBar() {
                   target="_blank"
                   rel="noreferrer"
                   onClick={() => setOpen(false)}
-                  className="text-3xl font-serif text-ink transition hover:text-accent"
+                  className="text-2xl text-ink transition hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -92,7 +85,7 @@ export default function NavBar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-3xl font-serif text-ink transition hover:text-accent"
+                  className="text-2xl text-ink transition hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -103,23 +96,11 @@ export default function NavBar() {
               target="_blank"
               rel="noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-full bg-accent px-6 py-3 text-base font-medium text-bg"
+              className="mt-2 rounded-full border border-border2 px-6 py-3 text-base text-ink transition hover:border-ink"
             >
               Get in Touch
             </a>
           </nav>
-
-          <div className="flex justify-center gap-6 px-8 pb-10">
-            <a
-              href={SOCIAL.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setOpen(false)}
-              className="text-sm text-ink/70 underline-offset-4 hover:text-accent hover:underline"
-            >
-              LinkedIn
-            </a>
-          </div>
         </div>
       )}
     </header>
