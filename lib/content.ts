@@ -1,17 +1,18 @@
 // Content mirrored from the live juandavidcano.com (Framer) site.
 
-export const NAV_LINKS = [
-  { label: "Projects", href: "/#case-study" },
-  { label: "About Me", href: "/about-me" },
-  { label: "Blog", href: "https://news.kronosgmt.com/", external: true },
-];
-
 export const SOCIAL = {
   linkedin: "https://www.linkedin.com/in/juan-david-cano",
   kronos: "https://kronosgmt.com/",
   calendly: "https://calendly.com/juancano-kronosgmt/introduction-meeting?primary_color=5f7ba3",
   dashboard: "https://dashboard.juandavidcano.com/",
 };
+
+// newTab controls target="_blank"; everything else navigates in the same tab.
+export const NAV_LINKS = [
+  { label: "Projects", href: SOCIAL.dashboard, newTab: false },
+  { label: "About Me", href: "/about-me", newTab: false },
+  { label: "Blog", href: "https://news.kronosgmt.com/", newTab: true },
+];
 
 export const HERO = {
   photo: "https://framerusercontent.com/images/LgTN8Ajc2Wcp7HS3fovE9kFM0Y.png?scale-down-to=1024&width=2048&height=2048",

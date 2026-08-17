@@ -13,7 +13,7 @@ export default function NavBar() {
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) =>
-            link.external ? (
+            link.newTab ? (
               <a
                 key={link.label}
                 href={link.href}
@@ -69,7 +69,7 @@ export default function NavBar() {
 
           <nav className="flex flex-1 flex-col items-center justify-center gap-8">
             {NAV_LINKS.map((link) =>
-              link.external ? (
+              link.newTab ? (
                 <a
                   key={link.label}
                   href={link.href}
