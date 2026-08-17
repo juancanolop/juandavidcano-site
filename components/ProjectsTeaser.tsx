@@ -16,8 +16,6 @@ export default function ProjectsTeaser() {
           <p className="mt-4 text-ink/80">{PROJECTS_TEASER.body}</p>
           <a
             href={SOCIAL.dashboard}
-            target="_blank"
-            rel="noreferrer"
             className="mt-6 inline-block rounded-full border border-border2 px-6 py-3 text-sm text-ink transition hover:border-ink"
           >
             {PROJECTS_TEASER.cta}
@@ -25,8 +23,6 @@ export default function ProjectsTeaser() {
         </div>
         <a
           href={SOCIAL.dashboard}
-          target="_blank"
-          rel="noreferrer"
           className="relative block overflow-hidden rounded-xl border border-border2/60"
         >
           <Image
