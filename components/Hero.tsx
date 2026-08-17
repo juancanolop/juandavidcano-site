@@ -11,6 +11,13 @@ export default function Hero() {
         className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full opacity-40 blur-[100px]"
         style={{ background: "radial-gradient(circle, rgb(125,203,255) 0%, transparent 70%)" }}
       />
+      {/* Second, warmer glow (violet) offset lower/behind the blue one, for
+          a richer blended background. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-24 h-[420px] w-[720px] -translate-x-1/2 rounded-full opacity-30 blur-[110px]"
+        style={{ background: "radial-gradient(circle, rgb(139,92,246) 0%, transparent 70%)" }}
+      />
       <div className="relative mx-auto max-w-3xl px-5 pb-16 pt-16 text-center sm:pt-24">
         <Image
           src={HERO.photo}

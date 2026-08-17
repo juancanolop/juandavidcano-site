@@ -100,7 +100,7 @@ export default function NavBar() {
               target="_blank"
               rel="noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full border border-border2 px-6 py-3 text-base text-ink transition hover:border-ink"
+              className="glow-pill mt-2 rounded-full px-6 py-3 text-base text-ink transition hover:bg-white/10"
             >
               Get in Touch
             </a>
