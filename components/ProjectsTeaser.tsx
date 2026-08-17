@@ -18,7 +18,7 @@ export default function ProjectsTeaser() {
             href={SOCIAL.dashboard}
             target="_blank"
             rel="noreferrer"
-            className="glow-pill mt-6 inline-block rounded-full px-6 py-3 text-sm text-ink transition hover:bg-white/10"
+            className="mt-6 inline-block rounded-full border border-border2 px-6 py-3 text-sm text-ink transition hover:border-ink"
           >
             {PROJECTS_TEASER.cta}
           </a>
