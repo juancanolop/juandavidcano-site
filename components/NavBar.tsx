@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Logo from "./Logo";
 import { NAV_LINKS, SOCIAL } from "@/lib/content";
 
 export default function NavBar() {
@@ -9,7 +10,9 @@ export default function NavBar() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="mx-auto flex max-w-5xl items-center justify-end gap-8 px-5 py-5">
+      <div className="mx-auto flex max-w-5xl items-center justify-between gap-8 px-5 py-5">
+        <Logo />
+
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) =>
@@ -57,7 +60,8 @@ export default function NavBar() {
       {/* Mobile overlay menu */}
       {open && (
         <div className="fixed inset-0 z-50 flex flex-col bg-bg md:hidden">
-          <div className="flex items-center justify-end px-5 py-5">
+          <div className="flex items-center justify-between px-5 py-5">
+            <Logo />
             <button
               onClick={() => setOpen(false)}
               aria-label="Close menu"

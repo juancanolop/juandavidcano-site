@@ -15,9 +15,9 @@ export default function Hero() {
         <Image
           src={HERO.photo}
           alt={HERO.name}
-          width={112}
-          height={112}
-          className="mx-auto h-28 w-28 rounded-full border border-border2 object-cover"
+          width={144}
+          height={144}
+          className="mx-auto h-36 w-36 rounded-full border border-border2 object-cover"
         />
 
         <a
