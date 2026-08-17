@@ -3,21 +3,9 @@ import { HERO, SOCIAL } from "@/lib/content";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative overflow-hidden">
-      {/* Ambient glow, matching the light-blue radial "Stroke"/"Glow" layers
-          found behind the hero content on the original site. */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full opacity-40 blur-[100px]"
-        style={{ background: "radial-gradient(circle, rgb(125,203,255) 0%, transparent 70%)" }}
-      />
-      {/* Second, warmer glow (violet) offset lower/behind the blue one, for
-          a richer blended background. */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-24 h-[420px] w-[720px] -translate-x-1/2 rounded-full opacity-30 blur-[110px]"
-        style={{ background: "radial-gradient(circle, rgb(139,92,246) 0%, transparent 70%)" }}
-      />
+    <section id="hero" className="relative">
+      {/* Ambient glow now lives in AmbientBackground (rendered once in the
+          root layout) so it carries through the whole page, not just here. */}
       <div className="relative mx-auto max-w-3xl px-5 pb-16 pt-16 text-center sm:pt-24">
         <Image
           src={HERO.photo}

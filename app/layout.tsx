@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk, Lustria } from "next/font/google";
+import AmbientBackground from "@/components/AmbientBackground";
 import "./globals.css";
 
 const hanken = Hanken_Grotesk({
@@ -24,7 +25,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${hanken.variable} ${lustria.variable}`}>
-      <body className="bg-bg font-sans text-ink antialiased">{children}</body>
+      <body className="bg-bg font-sans text-ink antialiased">
+        <AmbientBackground />
+        {children}
+      </body>
     </html>
   );
 }
