@@ -33,3 +33,34 @@ body {
     animation: none;
   }
 }
+
+/* Solid-black pill buttons with a soft blue glow inside, matching the
+   "Glow"/"Stroke" layers found in the original site's black CTA buttons
+   (CEO badge, View Projects, Get in Touch). */
+.glow-pill {
+  position: relative;
+  background-color: rgb(10, 10, 10);
+  isolation: isolate;
+}
+.glow-pill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(120% 200% at 50% 120%, rgba(181, 225, 255, 0.35), transparent 65%);
+  filter: blur(6px);
+  z-index: -1;
+}
+
+/* Diagonal gradient used on the LinkedIn badge in the original site. */
+.linkedin-gradient {
+  background: linear-gradient(314deg, rgba(0, 0, 0, 0.37) -33%, #0288ff 139%);
+}
+
+/* Radial "spotlight" fill used on the hero name text. */
+.spotlight-text {
+  background-image: radial-gradient(89% 200% at 46.5% 32.8%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.55) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

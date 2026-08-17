@@ -4,10 +4,12 @@ import { HERO, SOCIAL } from "@/lib/content";
 export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden">
+      {/* Ambient glow, matching the light-blue radial "Stroke"/"Glow" layers
+          found behind the hero content on the original site. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-[520px] w-[900px] -translate-x-1/2 rounded-full opacity-30 blur-3xl"
-        style={{ background: "radial-gradient(circle, #1e3a5f 0%, transparent 70%)" }}
+        className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full opacity-40 blur-[100px]"
+        style={{ background: "radial-gradient(circle, rgb(125,203,255) 0%, transparent 70%)" }}
       />
       <div className="relative mx-auto max-w-3xl px-5 pb-16 pt-16 text-center sm:pt-24">
         <Image
@@ -22,15 +24,17 @@ export default function Hero() {
           href={SOCIAL.linkedin}
           target="_blank"
           rel="noreferrer"
-          className="mx-auto mt-4 flex w-fit items-center gap-1.5 rounded-full bg-[#0a66c2] px-3.5 py-1.5 text-xs font-semibold text-white transition hover:opacity-90"
+          className="linkedin-gradient mx-auto mt-4 flex w-fit items-center gap-1.5 rounded-full border border-white/20 px-3.5 py-1.5 text-xs font-semibold text-white transition hover:opacity-90"
         >
-          <span className="flex h-4 w-4 items-center justify-center rounded-sm bg-white text-[10px] font-bold text-[#0a66c2]">
+          <span className="flex h-4 w-4 items-center justify-center rounded-sm bg-white text-[10px] font-bold text-[#0288ff]">
             in
           </span>
           LinkedIn
         </a>
 
-        <h1 className="mt-6 text-2xl font-semibold uppercase tracking-wide text-ink sm:text-4xl">{HERO.name}</h1>
+        <h1 className="spotlight-text mt-6 text-2xl font-semibold uppercase tracking-wide sm:text-4xl">
+          {HERO.name}
+        </h1>
         <p className="mx-auto mt-6 max-w-xl text-ink/90 sm:text-lg">{HERO.tagline}</p>
         <p className="mx-auto mt-4 max-w-lg text-sm text-muted2">{HERO.subtext}</p>
 
@@ -38,7 +42,7 @@ export default function Hero() {
           href={SOCIAL.kronos}
           target="_blank"
           rel="noreferrer"
-          className="mt-6 inline-block rounded-full bg-black px-5 py-2.5 text-sm text-ink transition hover:bg-white/10"
+          className="glow-pill mt-6 inline-block rounded-full px-5 py-2.5 text-sm text-ink transition hover:bg-white/10"
         >
           {HERO.role}
         </a>

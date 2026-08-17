@@ -4,20 +4,31 @@ import { PROJECTS_TEASER, SOCIAL } from "@/lib/content";
 export default function ProjectsTeaser() {
   return (
     <section id="case-study" className="mx-auto max-w-5xl scroll-mt-24 px-5 py-16">
-      <div className="grid items-center gap-8 rounded-2xl border border-border2/60 bg-bg2 p-6 sm:p-10 md:grid-cols-2">
-        <div>
+      <div className="relative grid items-center gap-8 overflow-hidden rounded-2xl border border-border2/60 bg-bg2 p-6 sm:p-10 md:grid-cols-2">
+        {/* Soft ambient glow tucked in a corner, matching the original card. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-16 -top-16 h-64 w-64 rounded-full opacity-20 blur-[100px]"
+          style={{ background: "rgb(130, 201, 94)" }}
+        />
+        <div className="relative">
           <h2 className="text-2xl font-semibold text-ink sm:text-3xl">{PROJECTS_TEASER.heading}</h2>
           <p className="mt-4 text-ink/80">{PROJECTS_TEASER.body}</p>
           <a
             href={SOCIAL.dashboard}
             target="_blank"
             rel="noreferrer"
-            className="mt-6 inline-block rounded-full bg-black px-6 py-3 text-sm text-ink transition hover:bg-white/10"
+            className="glow-pill mt-6 inline-block rounded-full px-6 py-3 text-sm text-ink transition hover:bg-white/10"
           >
             {PROJECTS_TEASER.cta}
           </a>
         </div>
-        <a href={SOCIAL.dashboard} target="_blank" rel="noreferrer" className="block overflow-hidden rounded-xl border border-border2/60">
+        <a
+          href={SOCIAL.dashboard}
+          target="_blank"
+          rel="noreferrer"
+          className="relative block overflow-hidden rounded-xl border border-border2/60"
+        >
           <Image
             src={PROJECTS_TEASER.image}
             alt="Projects Dashboard preview"

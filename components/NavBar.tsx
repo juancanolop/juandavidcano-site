@@ -33,7 +33,7 @@ export default function NavBar() {
             href={SOCIAL.calendly}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-black px-5 py-2 text-sm text-ink transition hover:bg-white/10"
+            className="glow-pill rounded-full px-5 py-2 text-sm text-ink transition hover:bg-white/10"
           >
             Get in Touch
           </a>

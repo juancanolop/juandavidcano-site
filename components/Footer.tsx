@@ -9,7 +9,7 @@ export default function Footer() {
           href={SOCIAL.calendly}
           target="_blank"
           rel="noreferrer"
-          className="rounded-full bg-black px-7 py-3 text-sm text-ink transition hover:bg-white/10"
+          className="glow-pill rounded-full px-7 py-3 text-sm text-ink transition hover:bg-white/10"
         >
           Get in Touch
         </a>
