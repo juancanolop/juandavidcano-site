@@ -57,6 +57,25 @@ body {
   background: linear-gradient(314deg, rgba(0, 0, 0, 0.37) -33%, #0288ff 139%);
 }
 
+/* Slow, continuous tumble for the dodecahedron logo. */
+.spin3d {
+  animation: spin3d 14s linear infinite;
+}
+@keyframes spin3d {
+  from {
+    transform: rotateX(15deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(15deg) rotateY(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spin3d {
+    animation: none;
+    transform: rotateX(15deg) rotateY(25deg);
+  }
+}
+
 /* Radial "spotlight" fill used on the hero name text. */
 .spotlight-text {
   background-image: radial-gradient(89% 200% at 46.5% 32.8%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.55) 100%);
