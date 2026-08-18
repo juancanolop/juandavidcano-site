@@ -11,12 +11,12 @@ export default function AmbientBackground() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       <div
-        className="absolute left-1/2 top-[-120px] h-[750px] w-[1150px] -translate-x-1/2 rounded-full opacity-30 blur-[110px]"
-        style={{ background: "radial-gradient(circle, rgb(125,203,255) 0%, rgba(125,203,255,0.5) 40%, transparent 72%)" }}
+        className="absolute left-1/2 top-[-40px] h-[420px] w-[650px] -translate-x-1/2 rounded-full opacity-20 blur-[100px]"
+        style={{ background: "radial-gradient(circle, rgb(125,203,255) 0%, rgba(125,203,255,0.4) 45%, transparent 75%)" }}
       />
       <div
-        className="absolute left-1/2 top-[80px] h-[600px] w-[950px] -translate-x-1/2 rounded-full opacity-25 blur-[120px]"
-        style={{ background: "radial-gradient(circle, rgb(139,92,246) 0%, rgba(139,92,246,0.45) 40%, transparent 72%)" }}
+        className="absolute left-1/2 top-[140px] h-[340px] w-[520px] -translate-x-1/2 rounded-full opacity-15 blur-[110px]"
+        style={{ background: "radial-gradient(circle, rgb(139,92,246) 0%, rgba(139,92,246,0.35) 45%, transparent 75%)" }}
       />
     </div>
   );
