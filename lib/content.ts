@@ -60,7 +60,10 @@ export const PROJECTS_TEASER = {
   heading: "Projects Dashboard",
   body: "Here, you can explore some of the projects I've been involved in",
   cta: "View Projects",
-  image: "https://framerusercontent.com/images/3mkZaJQm8J7IG7rJgi1m5YNFLw0.jpg?width=897&height=586",
+  // Real screenshot of the live dashboard (map + gallery), not the old
+  // static Framer placeholder — kept as a local asset (public/) since it's
+  // just a preview thumbnail, not something that needs to update live.
+  image: "/dashboard-preview.jpg",
 };
 
 export const ABOUT_TEASER = {

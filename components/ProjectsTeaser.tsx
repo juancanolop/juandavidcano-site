@@ -28,8 +28,8 @@ export default function ProjectsTeaser() {
           <Image
             src={PROJECTS_TEASER.image}
             alt="Projects Dashboard preview"
-            width={897}
-            height={586}
+            width={1400}
+            height={597}
             className="h-auto w-full object-cover transition hover:scale-[1.02]"
           />
         </a>
