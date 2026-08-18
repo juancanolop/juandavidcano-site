@@ -12,6 +12,7 @@ export default function Hero() {
           alt={HERO.name}
           width={144}
           height={144}
+          priority
           className="mx-auto h-36 w-36 rounded-full border border-border2 object-cover"
         />
 

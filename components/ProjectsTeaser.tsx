@@ -30,6 +30,7 @@ export default function ProjectsTeaser() {
             alt="Projects Dashboard preview"
             width={1594}
             height={855}
+            sizes="(max-width: 767px) 100vw, 480px"
             className="h-auto w-full object-cover transition hover:scale-[1.02]"
           />
         </a>
